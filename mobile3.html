@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Paul's Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #00143d;
+            color: #fff;
+        }
+
+        .screen {
+            display: none;
+            text-align: center;
+            background: linear-gradient(135deg, #0d4c9e, #00143d);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 400px;
+            margin: 50px auto;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 2px solid #fff;
+        }
+
+        h1, h2, p {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #008cff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #0077cc;
+        }
+
+        .social-links {
+            position: relative;
+            text-align: left;
+        }
+
+        .social-links p {
+            font-size: 18px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .fa-facebook {
+            color: #e8e9ed;
+
+        }
+
+        .fa-instagram {
+            color: #e8e9ed;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="home-screen" class="screen active">
+        <img src="c:\Users\Admin\Downloads\453898370_809589484308334_2972043740171894527_n.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>Hi I'm John Paul</h1>
+        <button class="btn" onclick="showScreen('social-links-screen')">Social Links</button>
+        <button class="btn" onclick="showScreen('about-screen')">About Me</button>
+    </div>
+
+    <div id="about-screen" class="screen">
+        <img src="c:\Users\Admin\Downloads\453898370_809589484308334_2972043740171894527_n.jpg" alt="Profile Picture" class="profile-pic">
+        <h2>ABOUT</h2>
+        <p>I am John Paul Castro, an aspiring web developer with a strong passion for technology and coding.</p>
+        <p>Driven by my dream to excel in the field, I am dedicated to learning and mastering the skills necessary to create innovative and efficient web solutions.</p>
+        <p>My enthusiasm for web development is matched by my commitment to achieving my goals and making a significant impact in the tech industry.</p>
+        <button class="btn" onclick="showScreen('social-links-screen')">Next</button>
+    </div>
+
+    <body>
+        <div id="social-links-screen" class="screen">
+            <img src="c:\Users\Admin\Downloads\453898370_809589484308334_2972043740171894527_n.jpg" alt="Profile Picture" class="profile-pic">
+            <button class="btn" onclick="showScreen('home-screen')">Home</button>
+            <div class="social-links">
+                <p><i class="fa fa-facebook"></i><a href="https://web.facebook.com/johnpaul.castro01/" class="fa-facebook">John Paul Castro</a></p>
+                <p><b>Date of Birth: </b> 25 March, 2001</p>
+                <p><b>Email: </b> deguzmanjnpl25@gmail.com</p>
+                <p><i class="fa fa-instagram"></i><a href="https://www.instagram.com/jnpl.cstro?fbclid=IwY2xjawE2SXVleHRuA2FlbQIxMAABHcIySPOJ3awgxXPyskXeO9MJkvBorBsLwQVj0ebONwGLX1-ES6v2MqGU1w_aem_iArlivwG8IsE_VI3mORsuw" class="fa-instagram">jnpl.cstro</a></p>
+            </div>
+        </div>
+        
+        <script>
+            function showScreen(screenId) {
+                const screens = document.querySelectorAll('.screen');
+                screens.forEach(screen => screen.classList.remove('active'));
+                document.getElementById(screenId).classList.add('active');
+            }
+        </script>
+    </body>
+    </html>
